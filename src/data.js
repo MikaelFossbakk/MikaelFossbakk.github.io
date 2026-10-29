@@ -7,10 +7,8 @@ export const profil = {
   undertittel: "Jeg utvikler løsninger som starter med brukerne, og koder dem helt fram.",
   bilde: "img/mikael.jpg",
   epost: "fossbakkm@gmail.com",
-  // Fyll inn når du har dem, eller la stå tomt ("") for å skjule knappen
-  linkedin: "",
-  github: "",
-  // Eksporter CV-en som PDF og legg den i public/filer/ med dette navnet
+  //linkedin: "",
+  github: "https://github.com/MikaelFossbakk",
   cv: "filer/CV-Mikael-Fossbakk.pdf",
 };
 
@@ -35,7 +33,6 @@ export const ferdigheter = {
     "React",
     "HTML",
     "C++ (Arduino)",
-    "Git",
   ],
 };
 
@@ -44,7 +41,7 @@ export const prosjekter = [
     id: "soppsporer",
     tittel: "SoppSporer",
     kontekst: "IN2000 · Software engineering med prosjektarbeid · våren 2026",
-    kort: "Android-app som beregner sjansen for å finne sopp akkurat nå, hvor som helst i Norge.",
+    kort: "Android-app som beregner sjansen for å finne sopp forksjellige steder i norge",
     rolle: "Hovedansvar for koding og utvikling av appen",
     team: "Team på seks: tre utviklere og tre designere",
     tags: ["Kotlin", "Android", "Maskinlæring", "REST-API-er", "Scrum"],
@@ -54,7 +51,7 @@ export const prosjekter = [
       {
         overskrift: "Om prosjektet",
         avsnitt: [
-          "SoppSporer er det store prosjektet vårt i IN2000, prosjektemnet i bacheloren. Vi valgte et åpent case basert på de felles datakatalogene data.norge.no og GeoNorge. Brukeren velger en sopp, trykker i kartet og får en score fra 0 til 100 som sier hvor gode forholdene er på det stedet akkurat nå.",
+          "SoppSporer er det store prosjektet vårt i IN2000. Vi valgte et åpent case basert på de felles datakatalogene data.norge.no og GeoNorge. Brukeren velger en sopp, trykker i kartet og får en score fra 0 til 100 som sier hvor gode forholdene er på det stedet akkurat nå.",
           "Andre soppapper viser hvor det er funnet sopp før. Vår app ser framover og peker på nye områder med gode forhold, slik at sankerne sprer seg i stedet for å samles på de samme stedene.",
         ],
       },
@@ -120,7 +117,7 @@ export const prosjekter = [
       {
         overskrift: "Min rolle",
         avsnitt: [
-          "Jeg satte opp Arduino-enhetene og skrev koden, og jeg planla og analyserte brukertestene. Prosjektet koblet bakgrunnen min fra helsesektoren med teknologi.",
+          "Jeg satte opp Arduino-enhetene og skrev koden, og var med på planlegging og analyse av brukertestene. Prosjektet koblet bakgrunnen min fra helsesektoren med teknologi.",
         ],
       },
       {
@@ -164,3 +161,14 @@ export const prosjekter = [
     ],
   },
 ];
+
+export const utenforStudiene = {
+  tittel: "Snowboard",
+  periode: "2018–2023",
+  avsnitt: [
+    "Fra 2018 til 2023 var jeg team Kjører for Papahop (Snowboard butikk). Jeg produserte videoklipp og edits for butikken, og jeg var med på eventene de arrangerte.",
+    "Å filme kjøring i utsatte fjellpartier krever nøye planlegging, gode risikovurderinger og god kommunikasjon med teamet. Produksjon av innhold for en sponsor handler om å levere noe de kan bruke. Begge deler er gode erfaringer jeg tar med meg videre.",
+  ],
+  video: "video/snowboard.mp4",
+  plakat: "img/snowboard-plakat.jpg",
+};

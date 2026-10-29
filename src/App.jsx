@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { profil, omMeg, ferdigheter, prosjekter } from "./data.js";
+import { profil, omMeg, ferdigheter, prosjekter, utenforStudiene } from "./data.js";
 
 const lenker = [
   { href: "#om-meg", tekst: "Om meg" },
@@ -96,15 +96,15 @@ function Hero() {
         <img className="portrett" src={profil.bilde} alt={`Portrett av ${profil.navn}`} />
         <div>
           <p className="hero-kicker">{profil.tittel}</p>
-          <h1>Hei, jeg er {profil.navn.split(" ")[0]}.</h1>
+          <h1>Mikael Fossbakk</h1>
           <p className="hero-tekst">{profil.undertittel}</p>
           <div className="knapper">
             <a className="knapp knapp-primar" href="#prosjekter">
               Se prosjektene mine <Ikon navn="pil" />
             </a>
             {profil.cv && (
-              <a className="knapp knapp-lys" href={profil.cv} download>
-                <Ikon navn="last-ned" /> Last ned CV
+                <a className="knapp knapp-lys" href={profil.cv} target="_blank" rel="noopener noreferrer">
+                <Ikon navn="lenke" /> Se CV
               </a>
             )}
           </div>
@@ -323,13 +323,38 @@ function Prosjekter() {
   );
 }
 
+function UtenforStudiene() {
+  const u = utenforStudiene;
+  return (
+    <section className="seksjon seksjon-farget" id="utenfor-studiene">
+      <div className="innhold">
+        <h2>Utenfor studiene</h2>
+        <div className="utenfor-grid">
+          <div>
+            <p className="kontekst">{u.periode}</p>
+            <h3>{u.tittel}</h3>
+            {u.avsnitt.map((a, i) => (
+              <p key={i} className="brodtekst">
+                {a}
+              </p>
+            ))}
+          </div>
+          <video controls preload="none" playsInline poster={u.plakat} src={u.video}>
+            Nettleseren din kan ikke spille av videoen.
+          </video>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Kontakt() {
   return (
     <footer className="kontakt" id="kontakt">
       <div className="innhold smal">
         <h2>Kontakt</h2>
         <p className="brodtekst">
-          Jeg søker sommerjobb for 2027. Send meg gjerne en e-post hvis du vil vite mer.
+          Send meg gjerne en e-post hvis det er noe du lurer på.
         </p>
         <div className="knapper">
           <a className="knapp knapp-lys" href={`mailto:${profil.epost}`}>
@@ -364,6 +389,7 @@ export default function App() {
         <OmMeg />
         <Ferdigheter />
         <Prosjekter />
+        <UtenforStudiene />
       </main>
       <Kontakt />
     </>
