@@ -105,7 +105,7 @@ export const prosjekter = [
     rolle: "Arduino-oppsett og koding, brukertesting og analyse",
     team: "Gruppe på fem",
     tags: ["C++", "Arduino", "Brukertesting", "Prototyping"],
-    forsidebilde: "img/neatheat-prototype.png",
+    forsidebilde: "img/neatheat-logo.png",
     forsidebildeAlt: "De to ferdige NeatHeat-enhetene i hvite, 3D-printede skall",
     seksjoner: [
       {
@@ -152,7 +152,7 @@ export const prosjekter = [
     bilder: [
       { src: "img/neatheat-storyboard.png", alt: "Håndtegnet storyboard som viser hvordan varslingen fungerer", tekst: "Storyboard fra konseptfasen", type: "bred" },
       { src: "img/neatheat-brukertest.png", alt: "To eldre brukere som ser på en prototype på en PC under en workshop", tekst: "Workshop med brukerne", type: "bred" },
-      { src: "img/neatheat-logo.png", alt: "NeatHeat-logoen: et stearinlys med et hjerte i en varseltrekant", tekst: "Logo", type: "bred" },
+      { src: "img/neatheat-prototype.png", alt: "NeatHeat-logoen: et stearinlys med et hjerte i en varseltrekant", tekst: "Flamme sensor og alarm", type: "bred" },
     ],
     lenker: [
       { tekst: "Les rapporten (PDF)", href: "filer/NeatHeat-rapport-IN1060.pdf" },
